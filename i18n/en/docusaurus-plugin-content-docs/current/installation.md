@@ -34,7 +34,7 @@ npm install hexo-pagination moment opentype.js
 
 ### 4. Theme configuration
 
-Copy `themes/tranquility/_config-template.yml` to your blog's root directory and rename it to `_config.tranquility.yml`. Personalize the theme by editing `_config.tranquility.yml`. See the [Configuration](./configuration/slogan.md) section or read the comments in the config file.
+Copy `themes/tranquility/_config-template.yml` to your blog's root directory and rename it to `_config.tranquility.yml`. Personalize the theme by editing `_config.tranquility.yml`. See the [Configuration](./configuration/basic/slogan.md) section or read the comments in the config file.
 
 ## Troubleshooting (for non-developers)
 

@@ -47,7 +47,7 @@ npm install hexo-pagination moment opentype.js
 cp themes/tranquility/_config-template.yml _config.tranquility.yml
 ```
 
-在 `_config.tranquility.yml` 中个性化主题配置，具体配置项查看[配置](./configuration/slogan.md)或阅读配置文件的注释。
+在 `_config.tranquility.yml` 中个性化主题配置，具体配置项查看[配置](./configuration/basic/slogan.md)或阅读配置文件的注释。
 
 ## 步骤 5：报错排查
 

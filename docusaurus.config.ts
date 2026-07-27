@@ -104,7 +104,7 @@ const config: Config = {
             },
             {
               label: '配置',
-              to: '/docs/configuration/slogan',
+              to: '/docs/configuration/basic/slogan',
             },
           ],
         },

@@ -1,0 +1,8 @@
+{
+  "label": "Basic",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Site mode, homepage, navbar, subpages, about page, timeline, footer and other basic options."
+  }
+}

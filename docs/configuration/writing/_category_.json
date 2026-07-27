@@ -1,0 +1,8 @@
+{
+  "label": "写作功能",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "文章封面、目录、置顶、相关文章、标签云、代码高亮、数学公式、Mermaid 图表等写作相关配置。"
+  }
+}

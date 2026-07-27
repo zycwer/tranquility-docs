@@ -1,0 +1,8 @@
+{
+  "label": "SEO & Discoverability",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Open Graph, JSON-LD structured data, sitemap, robots.txt, RSS auto-discovery, search."
+  }
+}

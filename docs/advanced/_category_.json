@@ -1,0 +1,8 @@
+{
+  "label": "高级自定义",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "自定义样式与布局、注入脚本、CDN、站点统计、评论系统、CI/CD 自动部署等进阶教程。"
+  }
+}

@@ -51,15 +51,15 @@ See the [Changelog](./changelog.md) for per-version details.
 ## Features
 
 - Homepage-style layout focused on personal branding
-- Supports a [pure homepage mode](./configuration/homepage.md) (no articles, aggregates external blog RSS)
-- ["Subpage" design](./configuration/subpage.md) for multi-discipline writing
-- [Recent Updates](./configuration/recent-updates.md) cards aggregating external blog RSS at build time — stable loading in mainland China
-- [About page](./configuration/about.md) (Hexo native page) and [Timeline](./configuration/timeline.md) (article-driven, click to view details)
-- [Hitokoto](./configuration/slogan.md) slogan that refreshes on every page load
-- [Dark mode](./configuration/dark-mode.md) (light/dark/scheduled/follow-browser, one-click toggle in the navbar)
-- [Open Graph](./configuration/open-graph.md) social cards, [JSON-LD](./configuration/json-ld.md) structured data, [sitemap](./configuration/sitemap.md), [robots.txt](./configuration/robots.md), [RSS auto-discovery](./configuration/rss.md), and [PWA](./configuration/pwa.md) support
-- [Back-to-top button](./configuration/accessibility.md), [accessibility motion degradation](./configuration/accessibility.md), [font loading optimization](./configuration/font.md)
+- Supports a [pure homepage mode](./configuration/basic/homepage.md) (no articles, aggregates external blog RSS)
+- ["Subpage" design](./configuration/basic/subpage.md) for multi-discipline writing
+- [Recent Updates](./configuration/basic/recent-updates.md) cards aggregating external blog RSS at build time — stable loading in mainland China
+- [About page](./configuration/basic/about.md) (Hexo native page) and [Timeline](./configuration/basic/timeline.md) (article-driven, click to view details)
+- [Hitokoto](./configuration/basic/slogan.md) slogan that refreshes on every page load
+- [Dark mode](./configuration/experience/dark-mode.md) (light/dark/scheduled/follow-browser, one-click toggle in the navbar)
+- [Open Graph](./configuration/seo/open-graph.md) social cards, [JSON-LD](./configuration/seo/json-ld.md) structured data, [sitemap](./configuration/seo/sitemap.md), [robots.txt](./configuration/seo/robots.md), [RSS auto-discovery](./configuration/seo/rss.md), and [PWA](./configuration/experience/pwa.md) support
+- [Back-to-top button](./configuration/experience/accessibility.md), [accessibility motion degradation](./configuration/experience/accessibility.md), [font loading optimization](./configuration/experience/font.md)
 - Responsive across desktop, tablet, and mobile for comfortable reading
 - Custom font extraction and subsetting, balancing aesthetics and performance
-- [Related posts](./configuration/related-post.md), [math formulas](./configuration/math.md), [reward](./configuration/reward.md), [SEO](./configuration/others.md)
+- [Related posts](./configuration/writing/related-post.md), [math formulas](./configuration/writing/math.md), [reward](./configuration/basic/reward.md), [analytics & SEO](./advanced/analytics.md)
 - and more

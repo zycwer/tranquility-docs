@@ -1,0 +1,8 @@
+{
+  "label": "基础配置",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "站点模式、首页、导航、子页、关于页、时间线、页脚等基础配置项。"
+  }
+}

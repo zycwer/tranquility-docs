@@ -1,0 +1,8 @@
+{
+  "label": "Advanced",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Custom styles & layouts, script injection, CDN, analytics, comments, CI/CD deployment and other advanced tutorials."
+  }
+}

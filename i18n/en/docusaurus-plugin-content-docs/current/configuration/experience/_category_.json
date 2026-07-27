@@ -1,0 +1,8 @@
+{
+  "label": "Performance & Experience",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Dark mode, PWA, accessibility motion degradation, font loading optimization."
+  }
+}

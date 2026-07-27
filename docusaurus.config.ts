@@ -14,8 +14,8 @@ const config: Config = {
     v4: true,
   },
 
-  // 生产环境 URL，Vercel 部署后会绑定自定义域名，这里先填占位
-  url: 'https://tranquility-docs.vercel.app',
+  // 生产环境 URL（自定义域名）
+  url: 'https://docs.qwrcb.top',
   baseUrl: '/',
 
   onBrokenLinks: 'throw',

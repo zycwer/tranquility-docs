@@ -10,7 +10,40 @@ sidebar_position: 2
 
 ## Steps
 
-### 1. Clone the theme
+### Option A: Install via npm (Recommended)
+
+#### 1. Install the theme
+
+Runtime dependencies (`hexo-pagination`, `moment`, `opentype.js`, etc.) are installed automatically with the theme:
+
+```sh
+cd hexo
+npm install hexo-theme-tranquility
+```
+
+#### 2. Enable the theme
+
+Set the `theme` field to `tranquility` in your blog's root `_config.yml` (see [Themes | Hexo](https://hexo.io/docs/themes)):
+
+```yml
+theme: tranquility
+```
+
+#### 3. Remove conflicting dependencies
+
+`hexo-generator-category` and `hexo-generator-archive` conflict with this theme's "Subpage" design and must be removed (npm cannot uninstall other packages automatically):
+
+```bash
+npm uninstall hexo-generator-category hexo-generator-archive
+```
+
+#### 4. Theme configuration
+
+Create `_config.tranquility.yml` in your blog's root directory with **only the options you want to override** — the rest fall back to the in-package defaults (Hexo deep-merges them). See the [Configuration](./configuration/basic/slogan.md) section or read the comments in the theme repo's [`_config-template.yml`](https://github.com/zycwer/hexo-theme-tranquility/blob/main/_config-template.yml).
+
+### Option B: Install via Git Clone
+
+#### 1. Clone the theme
 
 Clone this repository into your Hexo blog's `themes/tranquility` folder:
 
@@ -19,11 +52,11 @@ cd hexo
 git clone https://github.com/zycwer/hexo-theme-tranquility.git themes/tranquility
 ```
 
-### 2. Enable the theme
+#### 2. Enable the theme
 
 Set the `theme` field to `tranquility` in your blog's root `_config.yml` (see [Themes | Hexo](https://hexo.io/docs/themes)).
 
-### 3. Install dependencies
+#### 3. Install dependencies
 
 Remove conflicting dependencies and install the required ones:
 

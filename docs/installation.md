@@ -13,16 +13,20 @@ sidebar_position: 2
 
 如果你还不了解以上内容，请从 [Hexo 文档](https://hexo.io/zh-cn/docs/) 获取相关帮助。
 
-## 步骤 1：克隆主题仓库
+## 步骤
 
-将本仓库克隆到你的 Hexo 目录的 `themes/tranquility` 文件夹下：
+### 方式一：通过 npm 安装（推荐）
 
-```bash
+#### 1. 安装主题
+
+运行时依赖（`hexo-pagination`、`moment`、`opentype.js` 等）会随主题自动装齐，无需手动安装：
+
+```sh
 cd hexo
-git clone https://github.com/zycwer/hexo-theme-tranquility.git themes/tranquility
+npm install hexo-theme-tranquility
 ```
 
-## 步骤 2：配置 theme 字段
+#### 2. 配置 theme 字段
 
 配置博客根目录下 `_config.yml` 中的 `theme` 字段为 `tranquility`（参考 [Themes | Hexo](https://hexo.io/zh-cn/docs/themes)）：
 
@@ -30,7 +34,38 @@ git clone https://github.com/zycwer/hexo-theme-tranquility.git themes/tranquilit
 theme: tranquility
 ```
 
-## 步骤 3：移除冲突依赖并安装必要依赖
+#### 3. 移除冲突依赖
+
+`hexo-generator-category` 与 `hexo-generator-archive` 与本主题的「子页」设计冲突，必须移除（npm 无法自动卸载别的包）：
+
+```bash
+npm uninstall hexo-generator-category hexo-generator-archive
+```
+
+#### 4. 主题配置
+
+在博客根目录新建 `_config.tranquility.yml`，**只需写需要修改的项**，其余走包内默认值（Hexo 会深合并覆盖）。具体配置项查看[配置](./configuration/basic/slogan.md)或阅读主题仓库的 [`_config-template.yml`](https://github.com/zycwer/hexo-theme-tranquility/blob/main/_config-template.yml) 注释。
+
+### 方式二：通过 Git 克隆安装
+
+#### 1. 克隆主题仓库
+
+将本仓库克隆到你的 Hexo 目录的 `themes/tranquility` 文件夹下：
+
+```sh
+cd hexo
+git clone https://github.com/zycwer/hexo-theme-tranquility.git themes/tranquility
+```
+
+#### 2. 配置 theme 字段
+
+配置博客根目录下 `_config.yml` 中的 `theme` 字段为 `tranquility`（参考 [Themes | Hexo](https://hexo.io/zh-cn/docs/themes)）：
+
+```yml
+theme: tranquility
+```
+
+#### 3. 移除冲突依赖并安装必要依赖
 
 ```bash
 npm uninstall hexo-generator-category hexo-generator-archive
@@ -39,7 +74,7 @@ npm install hexo-pagination moment opentype.js
 
 `hexo-generator-category` 与 `hexo-generator-archive` 与本主题的「子页」设计冲突，必须移除。
 
-## 步骤 4：主题配置
+#### 4. 主题配置
 
 将主题目录下的配置文件 `themes/tranquility/_config-template.yml` 复制到博客根目录下，并重命名为 `_config.tranquility.yml`：
 

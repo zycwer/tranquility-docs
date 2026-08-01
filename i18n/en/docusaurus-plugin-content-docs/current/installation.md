@@ -6,13 +6,27 @@ sidebar_position: 2
 
 ## Prerequisites
 
-[Node.js (>=16)](https://nodejs.org/), [Git](https://git-scm.com/), [Hexo](https://hexo.io/), and a working Hexo blog. If you're new to these, start with the [Hexo docs](https://hexo.io/docs/).
+- [Node.js (>=16)](https://nodejs.org/)
+- [Git](https://git-scm.com/)
+- [Hexo](https://hexo.io/)
+- A working Hexo blog
 
-## Steps
+If you're new to these, start with the [Hexo docs](https://hexo.io/docs/).
 
-### Option A: Install via npm (Recommended)
+## Choose an Installation Method
 
-#### 1. Install the theme
+Both methods are functionally equivalent — pick whichever fits your workflow:
+
+| Method | Best for | Dependencies | Upgrade |
+| --- | --- | --- | --- |
+| **npm install** (Recommended) | Most users | Auto-installed | `npm install hexo-theme-tranquility@latest` |
+| **Git clone** | Hacking the source / tracking main | Manual | `git pull` |
+
+---
+
+## Option A: Install via npm (Recommended)
+
+### 1. Install the theme
 
 Runtime dependencies (`hexo-pagination`, `moment`, `opentype.js`, etc.) are installed automatically with the theme:
 
@@ -21,7 +35,7 @@ cd hexo
 npm install hexo-theme-tranquility
 ```
 
-#### 2. Enable the theme
+### 2. Enable the theme
 
 Set the `theme` field to `tranquility` in your blog's root `_config.yml` (see [Themes | Hexo](https://hexo.io/docs/themes)):
 
@@ -29,7 +43,7 @@ Set the `theme` field to `tranquility` in your blog's root `_config.yml` (see [T
 theme: tranquility
 ```
 
-#### 3. Remove conflicting dependencies
+### 3. Remove conflicting dependencies
 
 `hexo-generator-category` and `hexo-generator-archive` conflict with this theme's "Subpage" design and must be removed (npm cannot uninstall other packages automatically):
 
@@ -37,13 +51,17 @@ theme: tranquility
 npm uninstall hexo-generator-category hexo-generator-archive
 ```
 
-#### 4. Theme configuration
+### 4. Theme configuration
 
-Create `_config.tranquility.yml` in your blog's root directory with **only the options you want to override** — the rest fall back to the in-package defaults (Hexo deep-merges them). See the [Configuration](./configuration/basic/slogan.md) section or read the comments in the theme repo's [`_config-template.yml`](https://github.com/zycwer/hexo-theme-tranquility/blob/main/_config-template.yml).
+Create `_config.tranquility.yml` in your blog's root directory with **only the options you want to override** — the rest fall back to the in-package defaults (Hexo deep-merges them).
 
-### Option B: Install via Git Clone
+See the [Configuration](./configuration/basic/slogan.md) section or read the comments in the theme repo's [`_config-template.yml`](https://github.com/zycwer/hexo-theme-tranquility/blob/main/_config-template.yml).
 
-#### 1. Clone the theme
+---
+
+## Option B: Install via Git Clone
+
+### 1. Clone the theme
 
 Clone this repository into your Hexo blog's `themes/tranquility` folder:
 
@@ -52,28 +70,40 @@ cd hexo
 git clone https://github.com/zycwer/hexo-theme-tranquility.git themes/tranquility
 ```
 
-#### 2. Enable the theme
+### 2. Enable the theme
 
-Set the `theme` field to `tranquility` in your blog's root `_config.yml` (see [Themes | Hexo](https://hexo.io/docs/themes)).
+Set the `theme` field to `tranquility` in your blog's root `_config.yml` (see [Themes | Hexo](https://hexo.io/docs/themes)):
 
-#### 3. Install dependencies
+```yml
+theme: tranquility
+```
 
-Remove conflicting dependencies and install the required ones:
+### 3. Remove conflicting dependencies and install required ones
 
 ```bash
 npm uninstall hexo-generator-category hexo-generator-archive
 npm install hexo-pagination moment opentype.js
 ```
 
+`hexo-generator-category` and `hexo-generator-archive` conflict with this theme's "Subpage" design and must be removed.
+
 ### 4. Theme configuration
 
-Copy `themes/tranquility/_config-template.yml` to your blog's root directory and rename it to `_config.tranquility.yml`. Personalize the theme by editing `_config.tranquility.yml`. See the [Configuration](./configuration/basic/slogan.md) section or read the comments in the config file.
+Copy `themes/tranquility/_config-template.yml` to your blog's root directory and rename it to `_config.tranquility.yml`:
 
-## Troubleshooting (for non-developers)
+```bash
+cp themes/tranquility/_config-template.yml _config.tranquility.yml
+```
 
-Reading error messages helps locate issues quickly. For example:
+Personalize the theme by editing `_config.tranquility.yml`. See the [Configuration](./configuration/basic/slogan.md) section or read the comments in the config file.
 
-#### Missing dependencies
+---
+
+## Troubleshooting
+
+Reading error messages helps locate issues quickly.
+
+### Missing dependencies
 
 As the theme evolves, it may depend on more third-party modules. Users need to add new dependencies themselves. For example:
 
@@ -90,3 +120,10 @@ npm install a_third_module
 ```
 
 See [npm-install | npm Docs](https://docs.npmjs.com/cli/v8/commands/npm-install).
+
+---
+
+## Next Steps
+
+- After installation, head to [Configuration](./configuration/basic/slogan.md) to personalize your site
+- For upgrading, see the [Upgrade Guide](./upgrade.md)

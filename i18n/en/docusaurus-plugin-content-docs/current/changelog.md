@@ -4,7 +4,35 @@ sidebar_position: 10
 
 # Changelog
 
-This page summarizes the per-version changes since the fork (v1.4.0 ~ v1.6.1). For the full diff between versions, see the [GitHub Releases](https://github.com/zycwer/hexo-theme-tranquility/releases) page.
+This page summarizes the per-version changes since the fork. For the full diff between versions, see the [GitHub Releases](https://github.com/zycwer/hexo-theme-tranquility/releases) page.
+
+## v1.7.0 — Personal Homepage Features & Security/Performance
+
+### New features (personal homepage)
+
+- **Projects showcase**: project cards on the homepage (homepage link / repo link / tech tags), rendered statically at build time.
+- **Skills display**: grouped skills on the homepage — 0-100 proficiency bars or plain tags.
+- **Announcement banner**: dismissible site-wide banner; dismissal stored in `localStorage`, and the banner automatically reappears when the content changes.
+- **Site uptime**: real-time "running for X days X hours X minutes X seconds" in the footer, computed client-side.
+
+### Security enhancements
+
+- **CSP**: Content-Security-Policy via meta tags; origin allowlist collected automatically from enabled features. `csp_extra` sources are merged into matching directives.
+- **Referrer-Policy / Permissions-Policy**: defaults prevent full-URL leakage and disable camera/microphone/geolocation.
+- **Build-time URL validation (url-guard)**: neutralizes `javascript:` and other dangerous protocols in theme config link fields.
+- **CI**: build smoke test + CodeQL security scanning on every push.
+
+### Performance enhancements
+
+- **Asset fingerprinting**: content hash (`?v=xxxxxxxx`) appended to css/js/image/font references — permanent strong caching with automatic invalidation.
+- **WOFF font output**: subset fonts now default to WOFF (~half the size of TTF).
+- **PWA offline**: auto-generated offline page, stale-while-revalidate for static assets, versioned cache management.
+
+## v1.6.2 ~ v1.6.5 — npm Package & Size Optimization
+
+- v1.6.2/v1.6.3: official npm package (`npm install hexo-theme-tranquility`) plus multiple build-crash fixes.
+- v1.6.4: font subsetting (package size -73%), security fixes, robustness improvements.
+- v1.6.5: package size halved again (12.15MB → 6.3MB).
 
 ## v1.6.1 — Robustness Fixes
 

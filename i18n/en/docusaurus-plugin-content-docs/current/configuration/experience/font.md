@@ -12,13 +12,17 @@ Toggle via the `zh_font` config option.
 zh_font:
   enable: true
   fontName: sourceHanSerif
-  type: ttf
+  type: woff # output format: woff (recommended, ~half the size of ttf) | ttf
   style:
     - normal
     - bold
 ```
 
-You can replace the font files under the `_font/` directory with your own preferred fonts.
+| Field | Description |
+| --- | --- |
+| `zh_font.type` | Output format: `woff` (recommended, roughly half the size of `ttf`) or `ttf` |
+
+You can replace the font files under the `_font/` directory with your own preferred fonts. After replacing a font, the generated font's content hash changes, so the `?v=` fingerprint on its URL updates automatically — visitors' browsers never serve a stale font.
 
 ## Font loading optimization
 

@@ -4,7 +4,35 @@ sidebar_position: 10
 
 # 更新日志
 
-本页汇总本 fork 相较原仓库（hooozen/hexo-theme-tranquility）在 v1.4.0 ~ v1.6.1 期间的演进摘要。完整的发布说明请参考 [GitHub Releases](https://github.com/zycwer/hexo-theme-tranquility/releases)。
+本页汇总本 fork 相较原仓库（hooozen/hexo-theme-tranquility）的演进摘要。完整的发布说明请参考 [GitHub Releases](https://github.com/zycwer/hexo-theme-tranquility/releases)。
+
+## v1.7.0 — 个人主页功能与安全性能增强
+
+### 新功能（个人主页）
+
+- **项目展示**：首页项目卡片区块（主页链接/仓库链接/技术标签）
+- **技能展示**：首页分组技能区，0-100 熟练度进度条或标签两种形态
+- **公告横幅**：全站可关闭公告条，localStorage 记忆关闭状态，内容更新后自动重新展示
+- **建站时长**：页脚实时显示「本站已运行 X 天 X 小时 X 分 X 秒」
+
+### 安全增强
+
+- **CSP 内容安全策略**：meta 标签落地，来源白名单按已开启功能自动收集
+- **Referrer-Policy / Permissions-Policy**：默认防完整 URL 泄露、禁用摄像头/麦克风/定位
+- **构建期 URL 校验**：拦截主题配置中 `javascript:` 等危险协议链接并中和
+- **CI 安全扫描**：CodeQL 自动扫描 + 构建冒烟测试
+
+### 性能增强
+
+- **资源内容指纹**：css/js/图片/字体引用追加内容哈希，永久强缓存 + 自动失效
+- **字体 WOFF 输出**：子集字体默认输出 WOFF，体积约为 TTF 一半
+- **PWA 离线增强**：离线提示页、stale-while-revalidate 策略、版本化缓存管理
+
+## v1.6.2 ~ v1.6.5 — npm 包与体积优化
+
+- v1.6.2/v1.6.3：正式支持 npm 安装（`npm install hexo-theme-tranquility`），修复多个构建崩溃问题
+- v1.6.4：字体子集化（包体积 -73%）、安全漏洞修复、健壮性增强
+- v1.6.5：主题包体积再减半（12.15MB → 6.3MB）
 
 ## v1.6.1 — 健壮性修复
 

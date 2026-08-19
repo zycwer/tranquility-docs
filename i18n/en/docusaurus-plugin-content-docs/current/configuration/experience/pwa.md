@@ -20,8 +20,12 @@ pwa:
 ## When enabled
 
 - `manifest.json` generates its `icons` array from the `favicon` config (apple-touch-icon 180×180, favicon-32×32, svg).
-- `sw.js` uses a "cache-first for static assets, network-first with cache fallback for HTML" strategy: JS/CSS/images/fonts are read from cache first; HTML pages prefer the network and fall back to cache on failure (so users can revisit pages they've already seen, even offline).
-- The page automatically registers the Service Worker (only in production, HTTPS, or `localhost`) and sets `<meta name="theme-color">`.
+- `sw.js` uses a "network-first for HTML, stale-while-revalidate for static assets" strategy:
+  - **HTML pages** prefer the network for freshness and cache successful responses; on network failure they fall back to cache, and when no cache exists, an auto-generated **offline page** (`offline.html`) is served.
+  - **Static assets** (JS / CSS / images / fonts) return from cache instantly while refreshing the cache in the background — the latest version is served on the next visit.
+  - **Precache**: the homepage, core stylesheet, and offline page are precached when the SW installs, making the site fully offline-capable after the first visit.
+  - **Versioned cache**: cache names carry a version, so old caches are purged automatically after a new deployment — no mixed stale/fresh assets.
+- The page automatically registers the Service Worker (only in production, HTTPS, or `localhost`) and sets `<meta name="theme-color">`. The SW is never registered under `hexo server`, keeping local development cache-free.
 
 :::note
 PWA Service Workers can only be registered under **HTTPS** (except `localhost`). GitHub Pages, Vercel, Netlify, Cloudflare Pages, and most modern hosting platforms provide HTTPS by default, so they work out of the box.

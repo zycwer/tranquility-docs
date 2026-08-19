@@ -3,6 +3,6 @@
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "深色模式、PWA、无障碍动效降级、字体加载优化。"
+    "description": "深色模式、PWA、无障碍动效降级、字体加载优化、安全策略与资源指纹。"
   }
 }

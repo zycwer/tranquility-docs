@@ -14,7 +14,7 @@ sidebar_position: 4
 zh_font:
   enable: true
   fontName: sourceHanSerif
-  type: ttf
+  type: woff # 输出格式：woff（推荐，体积约为 ttf 一半）| ttf
   style:
     - normal
     - bold
@@ -26,7 +26,7 @@ zh_font:
 | --- | --- |
 | `zh_font.enable` | 是否开启自定义字体 |
 | `zh_font.fontName` | 字体名称 |
-| `zh_font.type` | 字体文件类型，如 `ttf` |
+| `zh_font.type` | 输出格式：`woff`（推荐，体积约为 `ttf` 的一半）或 `ttf` |
 | `zh_font.style` | 启用的字重，如 `normal`、`bold` |
 
 ## 替换字体文件
@@ -37,7 +37,7 @@ zh_font:
 - `bold.ttf` —— 粗体字重
 - `regular.ttf` —— 另一种字重
 
-构建时主题会自动从这些字体文件中提取页面实际用到的字形并打包成子字体。
+构建时主题会自动从这些字体文件中提取页面实际用到的字形并打包成子字体。替换字体后，产物字体的内容哈希会随之变化，引用 URL 的 `?v=` 指纹自动更新，访客浏览器缓存不会残留旧字体。
 
 ## font-display: swap 与 preload 优化
 

@@ -22,8 +22,21 @@ npm install hexo-renderer-pandoc
 直接在配置文件中开启 `mathjax` 即可使用：
 
 ```yml
-mathjax: true # 加载 LateX 数学公式库
+mathjax: true # 加载 LaTeX 数学公式库（默认从 jsDelivr CDN 加载）
 ```
+
+也可以填脚本完整 URL 覆盖默认 CDN（jsDelivr 在部分网络环境如中国大陆直连不可达，会导致公式一直显示为原始 `$...$` 文本）：
+
+```yml
+# 本地文件（推荐：下载 tex-svg.js 放到站点的 source/vendors/ 下，零外部依赖；
+# SVG 输出版无需额外字体文件）
+mathjax: /vendors/tex-svg.js
+
+# 或其他可达 CDN 的完整 URL
+mathjax: https://registry.npmmirror.com/mathjax/3.2.2/files/es5/tex-svg.js
+```
+
+脚本源不可达时，主题会在正文顶部显示可见的失败提示（而非无限等待），保留原始文本可读。
 
 ## 方法二：第三方插件服务端渲染
 

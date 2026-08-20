@@ -36,6 +36,10 @@ mathjax: https://registry.npmmirror.com/mathjax/3.2.2/files/es5/tex-svg.js
 
 When the script source is unreachable, the theme shows a visible failure notice at the top of the post body (instead of waiting forever), keeping the raw text readable.
 
+> The theme injects a config before the script loads, enabling `$...$` inline math and `$$...$$` display math by default (MathJax 3 does not recognize the `$` delimiter out of the box). If you define your own `window.MathJax` config, the theme will not override it.
+>
+> **Note**: the default `hexo-renderer-marked` breaks LaTeX `\\` (matrix line breaks and multi-line derivations will fail). Follow the prerequisites above and switch to `hexo-renderer-pandoc`, or protect the formulas yourself.
+
 ## Method 2: Third-party plugin (recommended)
 
 Use the third-party plugin [hexo-filter-mathjax](https://github.com/next-theme/hexo-filter-mathjax) for server-side rendering. Set `mathjax: false` in the config.

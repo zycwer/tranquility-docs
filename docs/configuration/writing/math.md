@@ -38,6 +38,10 @@ mathjax: https://registry.npmmirror.com/mathjax/3.2.2/files/es5/tex-svg.js
 
 脚本源不可达时，主题会在正文顶部显示可见的失败提示（而非无限等待），保留原始文本可读。
 
+> 主题已在脚本加载前注入配置，默认启用 `$...$` 行内公式与 `$$...$$` 块级公式（MathJax 3 出于历史原因默认不识别 `$` 分隔符）。若你自行定义了 `window.MathJax` 配置，主题不会覆盖。
+>
+> **注意**：默认的 `hexo-renderer-marked` 会破坏 LaTeX 中的 `\\`（矩阵换行、多行推导对齐都会失效），请务必按前置准备改用 `hexo-renderer-pandoc`，或自行在公式外做转义保护。
+
 ## 方法二：第三方插件服务端渲染
 
 使用第三方插件 [hexo-filter-mathjax](https://github.com/next-theme/hexo-filter-mathjax) 进行服务端渲染，并关闭配置文件中的 `mathjax: false`：

@@ -6,6 +6,25 @@ sidebar_position: 10
 
 本页汇总本 fork 相较原仓库（hooozen/hexo-theme-tranquility）的演进摘要。完整的发布说明请参考 [GitHub Releases](https://github.com/zycwer/hexo-theme-tranquility/releases)。
 
+## v1.7.1 — CDN 可靠性与数学公式修复
+
+### CDN 可靠性（重点修复）
+
+- **默认 CDN 切换为 npmmirror**：jsDelivr 在部分国内网络不可达，导致数学公式与 Mermaid 图表一直卡在原始文本。默认源改为阿里国内镜像 `registry.npmmirror.com`，大陆直连稳定
+- **双格式自动适配**：新增 URL 构造宏，根据 `cdn` 配置自动适配 npmmirror（`/pkg/版本/files/路径`）与 jsDelivr/unpkg（`/pkg@版本/路径`）两种格式，换源无需逐项配置
+- **脚本源单项覆盖**：`mermaid.url` 与 `mathjax`（字符串形式）支持指定完整脚本 URL（本地路径或任意可达源），优先级高于 `cdn` 拼接
+- **加载失败可见提示**：脚本源不可达时正文顶部显示失败提示（替代无限等待），原始文本保持可读
+
+### 数学公式修复
+
+- **行内公式**：MathJax 3 默认不启用 `$...$` 分隔符，主题现已在脚本加载前注入配置，开箱即用（用户自定义 `window.MathJax` 时不覆盖）
+- **矩阵与多行推导**：修复文档说明，默认 `hexo-renderer-marked` 会破坏 LaTeX `\\`，需改用 `hexo-renderer-pandoc` 或自行保护公式
+
+### 其他
+
+- **官方演示站**：GitHub Pages 演示站上线（每次提交自动构建），README 与文档同步收录
+- **移动端适配**：技能区窄屏适配（安全边距/折行/间距）、最近更新轮播窄屏溢出修复、公告横幅对齐设计语言
+
 ## v1.7.0 — 个人主页功能与安全性能增强
 
 ### 新功能（个人主页）

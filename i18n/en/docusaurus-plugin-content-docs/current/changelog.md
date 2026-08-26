@@ -6,6 +6,25 @@ sidebar_position: 10
 
 This page summarizes the per-version changes since the fork. For the full diff between versions, see the [GitHub Releases](https://github.com/zycwer/hexo-theme-tranquility/releases) page.
 
+## v1.7.1 — CDN Reliability & Math Fixes
+
+### CDN reliability (highlights)
+
+- **Default CDN switched to npmmirror**: jsDelivr is unreachable on some mainland-China networks, leaving math formulas and Mermaid diagrams stuck as raw text. The default source is now Alibaba's China mirror `registry.npmmirror.com` — stable on direct mainland connections
+- **Dual-format auto-adaptation**: a new URL-building macro auto-adapts to npmmirror (`/pkg/version/files/path`) and jsDelivr/unpkg (`/pkg@version/path`) formats based on the `cdn` config — switching sources needs no per-library changes
+- **Per-library script override**: `mermaid.url` and `mathjax` (as a string) accept a full script URL (local path or any reachable source), taking precedence over the `cdn` composition
+- **Visible failure notice**: when the script source is unreachable, a notice appears at the top of the post body (instead of waiting forever) and the raw text stays readable
+
+### Math fixes
+
+- **Inline math**: MathJax 3 does not enable the `$...$` delimiter by default; the theme now injects the config before the script loads, so it works out of the box (user-defined `window.MathJax` is not overridden)
+- **Matrices & multi-line derivations**: documented that the default `hexo-renderer-marked` breaks LaTeX `\\` — switch to `hexo-renderer-pandoc` or protect formulas yourself
+
+### Others
+
+- **Official demo site**: GitHub Pages demo launched (rebuilt automatically on every commit); linked from README and docs
+- **Mobile adaptations**: skills section narrow-screen fit (safe margins/wrapping/spacing), recent-updates carousel overflow fix, announcement banner design-language alignment
+
 ## v1.7.0 — Personal Homepage Features & Security/Performance
 
 ### New features (personal homepage)

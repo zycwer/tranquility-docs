@@ -22,7 +22,7 @@ npm install hexo-filter-mermaid-diagrams
 mermaid:
   enable: true # 启用 Mermaid 增强
   version: 10.9.3 # 固定版本，避免使用 latest 因上游 breaking change 失效
-  url: # 可选，脚本完整 URL（本地路径或任意可达 CDN），留空走默认 jsdelivr 拼接
+  url: # 可选，脚本完整 URL（本地路径或任意可达 CDN），留空走默认 CDN（npmmirror）拼接
   options:
     startOnload: true
 ```
@@ -38,7 +38,7 @@ mermaid:
 
 ## 自定义脚本源（CDN 不可达时）
 
-默认从 jsDelivr（`theme.cdn` 或 `https://cdn.jsdelivr.net/npm`）加载 Mermaid。jsDelivr 在部分网络环境（如中国大陆直连）不可达，会导致图表一直停留在原始文本。此时可通过 `mermaid.url` 指向可达源：
+默认从 npmmirror（`theme.cdn` 或 `https://registry.npmmirror.com`，阿里国内镜像）加载 Mermaid。若你的网络无法访问（或希望换源），可通过 `mermaid.url` 指向可达源：
 
 ```yml
 # 使用本地文件（推荐：下载 mermaid.min.js 放到站点的 source/vendors/ 下，零外部依赖）

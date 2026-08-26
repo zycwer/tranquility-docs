@@ -18,14 +18,14 @@ npm install hexo-filter-mermaid-diagrams
 mermaid:
   enable: true # enable Mermaid
   version: 10.9.3 # pin the version to avoid breakage from upstream "latest"
-  url: # optional, full script URL (local path or any reachable CDN); empty = default jsDelivr
+  url: # optional, full script URL (local path or any reachable CDN); empty = default CDN (npmmirror)
   options:
     startOnload: true
 ```
 
 ### Custom script source
 
-By default Mermaid is loaded from jsDelivr (`theme.cdn` or `https://cdn.jsdelivr.net/npm`). jsDelivr is unreachable in some networks (e.g. mainland China direct connection), which leaves diagrams stuck as raw text. Point `mermaid.url` to a reachable source instead:
+By default Mermaid is loaded from npmmirror (`theme.cdn` or `https://registry.npmmirror.com`, Alibaba's China mirror). If your network cannot reach it (or you prefer another source), point `mermaid.url` to a reachable source:
 
 ```yml
 # Local file (recommended: download mermaid.min.js into source/vendors/ — zero external dependencies)

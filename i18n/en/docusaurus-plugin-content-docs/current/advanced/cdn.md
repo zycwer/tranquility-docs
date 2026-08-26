@@ -10,32 +10,31 @@ Some theme features rely on third-party JS libraries (MathJax for math rendering
 
 ```yml
 # CDN source for third-party libraries (MathJax / Mermaid / DocSearch)
-# Default jsDelivr; unpkg is unstable in mainland China. Use https://npm.elemecdn.com for China
-cdn: https://cdn.jsdelivr.net/npm
+# Default npmmirror (Alibaba's China mirror, stable on mainland networks);
+# switch to https://cdn.jsdelivr.net/npm for overseas audiences
+cdn: https://registry.npmmirror.com
 ```
 
 ## Available CDN sources
 
 | CDN | URL | Best for |
 | --- | --- | --- |
-| jsDelivr (default) | `https://cdn.jsdelivr.net/npm` | Global; occasionally slow in China |
-| unpkg | `https://unpkg.com` | Stable abroad; slow in China |
-| Eleme CDN | `https://npm.elemecdn.com` | Stable in China; recommended for China users |
-| ByteDance CDN | `https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M` | China alternative |
-
-### Recommended for China
-
-```yml
-cdn: https://npm.elemecdn.com
-```
+| npmmirror (default) | `https://registry.npmmirror.com` | Alibaba's China mirror; stable on mainland networks — recommended for China users |
+| jsDelivr | `https://cdn.jsdelivr.net/npm` | Global; unreachable on some mainland networks (the reason the default was switched) |
+| unpkg | `https://unpkg.com` | Global alternative; slow in China |
 
 ## How it works
 
-The theme concatenates `cdn` + package name + version when loading libraries, e.g.:
+The theme auto-adapts to two URL formats based on the `cdn` value:
+
+- **npmmirror**: `{cdn}/{package}/{version}/files/{path}`
+- **jsDelivr / unpkg**: `{cdn}/{package}@{version}/{path}`
+
+For example, with npmmirror configured:
 
 ```
-MathJax:  {cdn}/mathjax@3/es5/tex-mml-chtml.js
-Mermaid:  {cdn}/mermaid@10.9.3/dist/mermaid.min.js
+MathJax:  https://registry.npmmirror.com/mathjax/3.2.2/files/es5/tex-mml-chtml.js
+Mermaid:  https://registry.npmmirror.com/mermaid/10.9.3/files/dist/mermaid.min.js
 ```
 
 Changing `cdn` switches all third-party libraries to the new source — no per-library config needed.
@@ -52,7 +51,7 @@ mermaid:
 mathjax: /vendors/tex-svg.js # a string is a full URL; true still uses the cdn composition
 ```
 
-This is the most thorough fix when jsDelivr is unreachable — local files are same-origin with the site, with zero third-party dependencies.
+This is the most thorough fix when the CDN source is unreachable — local files are same-origin with the site, with zero third-party dependencies.
 
 ## Self-hosting libraries (offline)
 

@@ -10,32 +10,30 @@ sidebar_position: 4
 
 ```yml
 # 第三方库（MathJax / Mermaid / DocSearch）的 CDN 源
-# 默认 jsDelivr；unpkg 国内访问不稳定。国内可改为 https://npm.elemecdn.com
-cdn: https://cdn.jsdelivr.net/npm
+# 默认 npmmirror（阿里国内镜像，国内直连稳定）；海外可改为 https://cdn.jsdelivr.net/npm
+cdn: https://registry.npmmirror.com
 ```
 
 ## 可选 CDN 源
 
 | CDN | 地址 | 适用场景 |
 | --- | --- | --- |
-| jsDelivr（默认） | `https://cdn.jsdelivr.net/npm` | 全球通用，国内有时不稳定 |
-| unpkg | `https://unpkg.com` | 海外稳定，国内访问慢 |
-| 饿了么 CDN | `https://npm.elemecdn.com` | 国内访问稳定，推荐国内用户使用 |
-| 字节跳动 CDN | `https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M` | 国内备选 |
-
-### 国内推荐配置
-
-```yml
-cdn: https://npm.elemecdn.com
-```
+| npmmirror（默认） | `https://registry.npmmirror.com` | 阿里国内镜像，国内直连稳定，推荐国内用户使用 |
+| jsDelivr | `https://cdn.jsdelivr.net/npm` | 全球通用；部分国内网络不可达（这正是默认源切换的原因） |
+| unpkg | `https://unpkg.com` | 全球备选；国内访问慢 |
 
 ## 工作原理
 
-主题在加载第三方库时，会拼接 `cdn` + 包名 + 版本号，例如：
+主题会根据 `cdn` 地址自动适配两种 URL 格式：
+
+- **npmmirror**：`{cdn}/{包名}/{版本}/files/{路径}`
+- **jsDelivr / unpkg**：`{cdn}/{包名}@{版本}/{路径}`
+
+例如配置 npmmirror 时：
 
 ```
-MathJax:  {cdn}/mathjax@3/es5/tex-mml-chtml.js
-Mermaid:  {cdn}/mermaid@10.9.3/dist/mermaid.min.js
+MathJax:  https://registry.npmmirror.com/mathjax/3.2.2/files/es5/tex-mml-chtml.js
+Mermaid:  https://registry.npmmirror.com/mermaid/10.9.3/files/dist/mermaid.min.js
 ```
 
 切换 `cdn` 后所有第三方库统一从新源加载，无需逐项配置。
@@ -52,7 +50,7 @@ mermaid:
 mathjax: /vendors/tex-svg.js # 字符串即完整 URL；true 仍走 cdn 拼接
 ```
 
-这是 jsDelivr 不可达时最彻底的解法 —— 本地文件与站点同源，无第三方依赖。
+这是脚本源不可达时最彻底的解法 —— 本地文件与站点同源，无第三方依赖。
 
 ## 自托管第三方库（离线场景）
 

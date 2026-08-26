@@ -121,7 +121,7 @@ const config: Config = {
             },
             {
               label: '演示站',
-              href: 'https://theme.hozen.site/tranquility/',
+              href: 'https://zycwer.github.io/hexo-theme-tranquility/',
             },
           ],
         },

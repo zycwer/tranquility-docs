@@ -20,10 +20,10 @@ The theme offers two ways to enable LaTeX math formula support. Both require the
 Use the theme's built-in LaTeX renderer. Enable `mathjax` in the config:
 
 ```yml
-mathjax: true # load the LaTeX math library (from the jsDelivr CDN by default)
+mathjax: true # load the LaTeX math library (from the npmmirror CDN by default)
 ```
 
-You can also pass a full script URL to override the default CDN (jsDelivr is unreachable in some networks such as mainland China direct connection, which leaves formulas stuck as raw `$...$` text):
+You can also pass a full script URL to override the default CDN (npmmirror, Alibaba's China mirror; if your network cannot reach it, formulas stay stuck as raw `$...$` text):
 
 ```yml
 # Local file (recommended: download tex-svg.js into source/vendors/ — zero external

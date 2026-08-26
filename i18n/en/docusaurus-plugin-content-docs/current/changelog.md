@@ -22,7 +22,7 @@ This page summarizes the per-version changes since the fork. For the full diff b
 
 ### Others
 
-- **Official demo site**: GitHub Pages demo launched (rebuilt automatically on every commit); linked from README and docs
+- **Demo site**: GitHub Pages demo launched (rebuilt automatically on every commit); linked from README and docs
 - **Mobile adaptations**: skills section narrow-screen fit (safe margins/wrapping/spacing), recent-updates carousel overflow fix, announcement banner design-language alignment
 
 ## v1.7.0 — Personal Homepage Features & Security/Performance

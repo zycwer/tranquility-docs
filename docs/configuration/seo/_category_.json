@@ -3,6 +3,7 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Open Graph、JSON-LD 结构化数据、站点地图、robots.txt、RSS 自动发现、文章搜索。"
+    "description": "Open Graph、JSON-LD 结构化数据、站点地图、robots.txt、RSS 自动发现、文章搜索。",
+    "slug": "configuration/seo"
   }
 }

@@ -4,44 +4,42 @@ sidebar_position: 1
 
 # Introduction
 
-Tranquility is a Hexo theme designed for personal homepages and multi-discipline bloggers. It changes Hexo's default design logic to focus on personal branding and clear domain boundaries across blog content.
+Tranquility is a Hexo theme designed for personal homepages and multi-discipline bloggers. Guided by the design philosophy of "tranquility and distance" (宁静致远), it focuses on personal branding and clear domain boundaries across blog content.
 
-## Fork Notice
+## Design Philosophy at a Glance
 
-This repository is a fork of [hooozen/hexo-theme-tranquility](https://github.com/hooozen/hexo-theme-tranquility). The original repository was archived in June 2026 and is no longer maintained. This fork continues maintenance, adding features and fixing bugs on top of the original.
+Unlike most Hexo themes, Tranquility's **homepage shows no article list** — instead it displays identity-focused modules like About, Timeline, Projects, and Skills. The concept of "**Subpage**" replaces "Category": each subpage maps to a broad discipline and gets a top-level navbar entry; within a subpage, posts are aggregated by tags.
 
-Major changes compared to the original repo:
+This design serves two needs: a **homepage that showcases personal identity**, and **clear domain boundaries** for multi-discipline content. See [Design Philosophy](./design.md) for details.
 
-- Hitokoto Slogan toggle
-- Article-driven timeline (replaces config-defined events)
-- Hexo native about page (replaces config-defined content)
-- Build-time RSS-aggregated "Recent Updates" cards
-- Runtime dark mode (CSS variables — no rebuild needed to switch)
-- Open Graph / Twitter Card / JSON-LD structured data
-- Sitemap (sitemap.xml), robots.txt, RSS auto-discovery
-- PWA (manifest.json + Service Worker), lazy image loading
-- Back-to-top button, `prefers-reduced-motion` accessibility degradation
-- Font loading optimization (`font-display: swap` + preload)
-- Code simplification (scripts directory -23%); removed the CV feature (duplicated by the about page)
-- Security hardening (fixed XSS / `</script>` injection / localStorage fallback, etc.)
-- Removed the deprecated Gitalk comments feature
+## Key Features
 
-See [Releases](https://github.com/zycwer/hexo-theme-tranquility/releases) for details.
+**Personal homepage**
 
-## Version Evolution (v1.4.0 ~ v1.6.1)
+- Identity-focused homepage: [About](./configuration/basic/about.md), [Timeline](./configuration/basic/timeline.md), [Projects](./configuration/basic/projects.md), [Skills](./configuration/basic/skills.md)
+- Supports a [pure homepage mode](./configuration/basic/homepage.md) (no articles, aggregates external blog RSS)
+- ["Subpage" design](./configuration/basic/subpage.md) for multi-discipline writing
+- [Recent Updates](./configuration/basic/recent-updates.md) cards aggregating external blog RSS at build time — stable loading in mainland China
+- [Announcement banner](./configuration/basic/announcement.md), site uptime counter, [Hitokoto slogan](./configuration/basic/slogan.md), [reward](./configuration/basic/reward.md)
 
-Since the fork, the theme has iterated through the following versions:
+**Writing**
 
-| Version | Date | Theme |
-| --- | --- | --- |
-| v1.4.0 | 2026-07-16 | Personalization enhanced — first fork release: Hitokoto slogan, article-driven timeline, native about page, build-time RSS recent updates |
-| v1.5.0 | 2026-07-18 | Modernization — runtime dark mode, Open Graph/Twitter Card, JSON-LD, sitemap, PWA, image lazy loading |
-| v1.5.1 | 2026-07-19 | Performance optimization and bug fixes — TOC throttling, template caching, 6 defect fixes |
-| v1.5.2 | 2026-07-22 | Security hardening and robustness — XSS fixes, functional defects, error handling, SEO improvements |
-| v1.6.0 | 2026-07-22 | Accessibility / performance / experience — back-to-top button, prefers-reduced-motion, RSS auto-discovery, robots.txt, font loading optimization |
-| v1.6.1 | 2026-07-26 | Robustness fixes — RSS auto-discovery config read, JSON-LD image URL, carousel null checks |
+- [Post cover](./configuration/writing/post-cover.md), [TOC](./configuration/writing/post-toc.md), [sticky posts](./configuration/writing/post-pin.md), [excerpt](./configuration/writing/post-excerpt.md)
+- [Related posts](./configuration/writing/related-post.md), [tag cloud](./configuration/writing/tagcloud.md), [code highlighting](./configuration/writing/code-highlight.md)
+- [Math formulas](./configuration/writing/math.md) (MathJax), [Mermaid diagrams](./configuration/writing/mermaid.md)
 
-See the [Changelog](./changelog.md) for per-version details.
+**SEO & discoverability**
+
+- [Open Graph](./configuration/seo/open-graph.md) / Twitter Card social cards, [JSON-LD](./configuration/seo/json-ld.md) structured data
+- [Sitemap](./configuration/seo/sitemap.md), [robots.txt](./configuration/seo/robots.md), [RSS auto-discovery](./configuration/seo/rss.md)
+- [Search](./configuration/seo/search.md): local search with no external service, optional Algolia DocSearch
+
+**Performance / experience / security**
+
+- [Dark mode](./configuration/experience/dark-mode.md) with four strategies (light/dark/scheduled/follow-browser)
+- [PWA](./configuration/experience/pwa.md) offline access, [content-fingerprinted](./configuration/experience/fingerprint.md) asset caching, [font subsetting](./configuration/experience/font.md)
+- [Back-to-top button](./configuration/experience/accessibility.md), `prefers-reduced-motion` accessibility degradation, lazy image loading, responsive across desktop/tablet/mobile
+- [CSP security policy](./configuration/experience/security.md), build-time URL validation, XSS injection protection
 
 ## Demo Sites
 
@@ -49,18 +47,14 @@ See the [Changelog](./changelog.md) for per-version details.
 - [Tranquility](https://theme.hozen.site/tranquility/) (original theme demo)
 - [Hozen's Homepage](https://www.hozen.site)
 
-## Features
+## Fork Notice
 
-- Homepage-style layout focused on personal branding
-- Supports a [pure homepage mode](./configuration/basic/homepage.md) (no articles, aggregates external blog RSS)
-- ["Subpage" design](./configuration/basic/subpage.md) for multi-discipline writing
-- [Recent Updates](./configuration/basic/recent-updates.md) cards aggregating external blog RSS at build time — stable loading in mainland China
-- [About page](./configuration/basic/about.md) (Hexo native page) and [Timeline](./configuration/basic/timeline.md) (article-driven, click to view details)
-- [Hitokoto](./configuration/basic/slogan.md) slogan that refreshes on every page load
-- [Dark mode](./configuration/experience/dark-mode.md) (light/dark/scheduled/follow-browser, one-click toggle in the navbar)
-- [Open Graph](./configuration/seo/open-graph.md) social cards, [JSON-LD](./configuration/seo/json-ld.md) structured data, [sitemap](./configuration/seo/sitemap.md), [robots.txt](./configuration/seo/robots.md), [RSS auto-discovery](./configuration/seo/rss.md), and [PWA](./configuration/experience/pwa.md) support
-- [Back-to-top button](./configuration/experience/accessibility.md), [accessibility motion degradation](./configuration/experience/accessibility.md), [font loading optimization](./configuration/experience/font.md)
-- Responsive across desktop, tablet, and mobile for comfortable reading
-- Custom font extraction and subsetting, balancing aesthetics and performance
-- [Related posts](./configuration/writing/related-post.md), [math formulas](./configuration/writing/math.md), [reward](./configuration/basic/reward.md), [analytics & SEO](./advanced/analytics.md)
-- and more
+This repository is a fork of [hooozen/hexo-theme-tranquility](https://github.com/hooozen/hexo-theme-tranquility). The original repository was archived in June 2026 and is no longer maintained. This fork continues maintenance, adding features and fixing bugs on top of the original, including: Hitokoto slogan, article-driven timeline, Hexo native about page, build-time RSS-aggregated "Recent Updates", runtime dark mode, Open Graph / JSON-LD / sitemap / robots.txt / RSS auto-discovery, PWA, lazy image loading, back-to-top button, accessibility degradation, font loading optimization, security hardening (XSS / CSP / injection protection), projects showcase, skills display, announcement banner, site uptime counter, and more.
+
+See the [Changelog](./changelog.md) and [Releases](https://github.com/zycwer/hexo-theme-tranquility/releases) for the full version history.
+
+## Next Steps
+
+- [Install the theme](./installation.md) — up and running with npm in a minute
+- [Configuration](./configuration/basic/homepage.md) — personalize your site
+- [Design Philosophy](./design.md) — understand the "Subpage" and "Tag" split

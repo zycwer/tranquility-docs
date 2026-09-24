@@ -3,6 +3,7 @@
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Site mode, homepage, navbar, announcement, projects, skills, about page, timeline, footer and other basic options."
+    "description": "Site mode, homepage, navbar, announcement, projects, skills, about page, timeline, footer and other basic options.",
+    "slug": "configuration/basic"
   }
 }

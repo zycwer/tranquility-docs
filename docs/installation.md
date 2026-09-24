@@ -55,7 +55,7 @@ npm uninstall hexo-generator-category hexo-generator-archive
 
 在博客根目录新建 `_config.tranquility.yml`，**只需写需要修改的项**，其余走包内默认值（Hexo 会深合并覆盖）。
 
-具体配置项查看[配置](./configuration/basic/slogan.md)或阅读主题仓库的 [`_config-template.yml`](https://github.com/zycwer/hexo-theme-tranquility/blob/main/_config-template.yml) 注释。
+具体配置项查看[配置总览](/docs/configuration)，或阅读主题仓库的 [`_config-template.yml`](https://github.com/zycwer/hexo-theme-tranquility/blob/main/_config-template.yml) 注释。
 
 ---
 
@@ -95,7 +95,17 @@ npm install hexo-pagination moment opentype.js
 cp themes/tranquility/_config-template.yml _config.tranquility.yml
 ```
 
-在 `_config.tranquility.yml` 中个性化主题配置，具体配置项查看[配置](./configuration/basic/slogan.md)或阅读配置文件的注释。
+在 `_config.tranquility.yml` 中个性化主题配置，具体配置项查看[配置总览](/docs/configuration)或阅读配置文件的注释。
+
+---
+
+## 验证
+
+```bash
+hexo clean && hexo s
+```
+
+浏览器访问 `http://localhost:4000`，看到主题首页即安装成功。
 
 ---
 
@@ -125,5 +135,6 @@ npm install a_third_module
 
 ## 下一步
 
-- 完成安装后，前往[配置](./configuration/basic/slogan.md)个性化你的站点
+- 完成安装后，前往[配置总览](/docs/configuration)个性化你的站点
 - 主题升级方式见[升级指南](./upgrade.md)
+- 想了解「子页」与「标签」的设计分工，见[设计逻辑](./design.md)

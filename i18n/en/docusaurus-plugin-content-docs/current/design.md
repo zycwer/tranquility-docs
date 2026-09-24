@@ -18,4 +18,4 @@ The concept of "Subpage" replaces "Category". All subpages have a top-level entr
 
 For posts within the same subpage, the theme borrows WeChat Official Account's classification logic and uses Tags for classification and aggregation. Thus, the theme **removes** the default Category concept and entry, replacing it with "Subpage" and "Tag".
 
-If the description here isn't clear enough, open the [demo site](https://www.hozen.site) and browse around — it should become obvious. If this change doesn't resonate with you, you may not have this need, and another Hexo theme might be a better fit.
+If the description here isn't clear enough, open the [demo site](https://zycwer.github.io/hexo-theme-tranquility/) and browse around — it should become obvious. If this change doesn't resonate with you, you may not have this need, and another Hexo theme might be a better fit.

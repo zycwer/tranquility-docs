@@ -3,6 +3,7 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Post cover, TOC, pin, related posts, tag cloud, code highlighting, math formulas, Mermaid diagrams."
+    "description": "Post cover, TOC, pin, related posts, tag cloud, code highlighting, math formulas, Mermaid diagrams.",
+    "slug": "configuration/writing"
   }
 }

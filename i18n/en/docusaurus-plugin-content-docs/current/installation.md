@@ -55,7 +55,7 @@ npm uninstall hexo-generator-category hexo-generator-archive
 
 Create `_config.tranquility.yml` in your blog's root directory with **only the options you want to override** — the rest fall back to the in-package defaults (Hexo deep-merges them).
 
-See the [Configuration](./configuration/basic/slogan.md) section or read the comments in the theme repo's [`_config-template.yml`](https://github.com/zycwer/hexo-theme-tranquility/blob/main/_config-template.yml).
+See the [Configuration Overview](/docs/configuration) or read the comments in the theme repo's [`_config-template.yml`](https://github.com/zycwer/hexo-theme-tranquility/blob/main/_config-template.yml).
 
 ---
 
@@ -95,7 +95,17 @@ Copy `themes/tranquility/_config-template.yml` to your blog's root directory and
 cp themes/tranquility/_config-template.yml _config.tranquility.yml
 ```
 
-Personalize the theme by editing `_config.tranquility.yml`. See the [Configuration](./configuration/basic/slogan.md) section or read the comments in the config file.
+Personalize the theme by editing `_config.tranquility.yml`. See the [Configuration Overview](/docs/configuration) or read the comments in the config file.
+
+---
+
+## Verify
+
+```bash
+hexo clean && hexo s
+```
+
+Open `http://localhost:4000` in your browser — the theme homepage means the installation succeeded.
 
 ---
 
@@ -125,5 +135,6 @@ See [npm-install | npm Docs](https://docs.npmjs.com/cli/v8/commands/npm-install)
 
 ## Next Steps
 
-- After installation, head to [Configuration](./configuration/basic/slogan.md) to personalize your site
+- After installation, head to the [Configuration Overview](/docs/configuration) to personalize your site
 - For upgrading, see the [Upgrade Guide](./upgrade.md)
+- To understand the "Subpage" and "Tag" split, see [Design Philosophy](./design.md)

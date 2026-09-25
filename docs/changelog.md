@@ -6,6 +6,40 @@ sidebar_position: 7
 
 本页汇总本 fork 相较原仓库（hooozen/hexo-theme-tranquility）的演进摘要。完整的发布说明请参考 [GitHub Releases](https://github.com/zycwer/hexo-theme-tranquility/releases)。
 
+## v1.9.0 — 归档页、樱花与音乐播放器
+
+> v1.8.0 因发布流程失误已从 npm 弃用（deprecated），请勿安装；其内容已并入本版本。
+
+### 新功能
+
+- **归档页**：按年份分组的时间线式文章归档页（`/archives/`），`nav.archive` 一键开启导航入口
+- **樱花飘落**：全站装饰动画，纯 CSS 硬件加速实现，`prefers-reduced-motion` 用户自动停用、移动端自动减半，不拦截任何交互
+- **音乐播放器**：APlayer 迷你模式浮动于左下角（JS/CSS 走 CDN 不增加包体积），通过 localStorage 跨页记忆曲目与播放进度，自动尝试续播
+
+### 配置示例
+
+```yaml
+sakura:
+  enable: true
+  density: 16 # 同屏花瓣数量，移动端自动减半
+
+music:
+  enable: true
+  songs:
+    - name: 歌曲名
+      artist: 歌手
+      url: https://example.com/song.mp3
+      cover: https://example.com/cover.jpg
+
+nav:
+  archive: true # 导航栏显示「归档」入口
+```
+
+## v1.7.2 ~ v1.7.3 — 字体体积优化与版本流程修复
+
+- v1.7.2：字体全面 WOFF2 化并按 GB2312 一级字集子集化，包体积 4.2MB → 1.9MB；一言仅取古诗词分类
+- v1.7.3：撤回误发的 1.8.0 npm 包（标记 deprecated），改用小版本号衔接
+
 ## v1.7.1 — CDN 可靠性与数学公式修复
 
 ### CDN 可靠性（重点修复）

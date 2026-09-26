@@ -6,6 +6,8 @@ sidebar_position: 13
 
 Show a dismissible announcement bar below the navbar **site-wide** — great for site notices, article teasers, or events.
 
+![Announcement banner: dismissible bar below the navbar](/img/announcement.png)
+
 ## Configuration
 
 ```yml

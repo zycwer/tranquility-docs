@@ -6,6 +6,8 @@ sidebar_position: 2
 
 通过在文章 front-matter 中配置 `toc: true` 来展示文章目录：
 
+![文章正文与右侧目录栏](/img/toc.png)
+
 ```yml
 ---
 title: 我的一篇文章

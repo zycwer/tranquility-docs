@@ -6,6 +6,8 @@ sidebar_position: 7
 
 The theme offers two ways to enable LaTeX math formula support. Both require the following setup first:
 
+![Inline and block formulas rendered by MathJax](/img/math.png)
+
 - **Remove** Hexo's default markdown renderer `hexo-renderer-marked` and install `hexo-renderer-pandoc`. Remove any other markdown renderers as well!
 
   ```bash

@@ -6,6 +6,8 @@ sidebar_position: 11
 
 Display project cards on the homepage — ideal for a personal site portfolio. Data is rendered statically **at build time** with no external requests.
 
+![Homepage "My Projects" card section](/img/projects.png)
+
 ## Configuration
 
 ```yml

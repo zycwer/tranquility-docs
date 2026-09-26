@@ -6,6 +6,8 @@ sidebar_position: 10
 
 通过 `reward` 配置项进行文章赞赏配置，包括头像、二维码和语句等：
 
+![文章底部的赞赏区块](/img/reward.png)
+
 ```yml
 reward: # 赞赏
   enable: true

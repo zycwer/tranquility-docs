@@ -6,6 +6,8 @@ sidebar_position: 1
 
 主题内置运行时深色模式（基于 CSS 变量，**切换无需重建**），支持四种策略，由 `color_mode` 控制。
 
+![深色模式下的首页](/img/dark-mode.png)
+
 ## 配置
 
 ```yml

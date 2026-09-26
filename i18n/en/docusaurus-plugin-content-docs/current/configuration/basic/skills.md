@@ -6,6 +6,8 @@ sidebar_position: 12
 
 Display skills in groups on the homepage. A skill with a `level` (0-100) is rendered as a **proficiency bar**; without `level`, it is shown as a **tag**.
 
+![Homepage "Skills" section: grouped proficiency bars and tags](/img/skills.png)
+
 ## Configuration
 
 ```yml

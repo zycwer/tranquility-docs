@@ -4,6 +4,10 @@ sidebar_position: 5
 
 # Subpage
 
+Subpages aggregate posts by **broad discipline**; each gets a top-level navbar entry, with posts listed as a timeline inside and tags aggregated as a tag cloud.
+
+![Subpage: post list aggregated by category](/img/subpage.png)
+
 Subpages are configured under `subpage`:
 
 ```yml

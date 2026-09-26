@@ -6,6 +6,8 @@ sidebar_position: 8
 
 Mermaid 是一个基于 JavaScript 的图表绘制工具，通过解析类 Markdown 的文本语法来实现图表的创建和动态修改。
 
+![Mermaid 渲染的流程图](/img/mermaid.png)
+
 ## 安装依赖
 
 首先安装依赖 [hexo-filter-mermaid-diagrams](https://github.com/jueinin/hexo-filter-mermaid-diagrams)：

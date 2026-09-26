@@ -6,6 +6,8 @@ sidebar_position: 7
 
 主题有两种方式开启对 LaTeX 数学公式的支持，但都需要先进行以下操作。
 
+![MathJax 渲染的行内与块级公式](/img/math.png)
+
 ## 前置准备
 
 - **移除** Hexo 默认的 markdown 渲染插件 `hexo-renderer-marked`，并安装 `hexo-renderer-pandoc`。如果安装了其他的 markdown 渲染插件也请移除！

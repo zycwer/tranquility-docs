@@ -6,6 +6,8 @@ sidebar_position: 10
 
 Configure post reward via the `reward` option, including avatar, QR code, and text.
 
+![Reward section at the bottom of a post](/img/reward.png)
+
 ```yml
 reward:
   enable: true

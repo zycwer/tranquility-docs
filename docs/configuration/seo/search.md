@@ -6,6 +6,8 @@ sidebar_position: 6
 
 主题内置搜索功能，通过如下配置主题配置文件启用：
 
+![搜索浮层：点击导航栏搜索图标展开](/img/search.png)
+
 ```yml
 search:
   path: search.json

@@ -6,6 +6,8 @@ sidebar_position: 5
 
 The tag cloud appears on each subpage's homepage to show the distribution of tags under that subpage. Two forms are available: a 3D animated cloud and a static tag cloud.
 
+![3D animated tag cloud on a subpage](/img/tagcloud.png)
+
 - `tagcloud.fancy` toggles the 3D animated cloud
 - Other `tagcloud` options configure the 3D cloud, see [tagcloud](https://hexo.io/docs/helpers#tagcloud)
 

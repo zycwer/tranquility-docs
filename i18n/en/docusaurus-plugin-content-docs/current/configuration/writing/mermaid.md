@@ -6,6 +6,8 @@ sidebar_position: 8
 
 Mermaid is a JavaScript-based diagramming tool that parses Markdown-like text syntax to create and dynamically modify diagrams.
 
+![Flowchart rendered by Mermaid](/img/mermaid.png)
+
 ## 1. Install the dependency
 
 ```bash

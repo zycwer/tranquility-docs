@@ -6,6 +6,8 @@ sidebar_position: 1
 
 The theme ships with runtime dark mode (built on CSS variables — **no rebuild needed to switch**). Four strategies are supported, controlled by `color_mode`:
 
+![Homepage in dark mode](/img/dark-mode.png)
+
 ```yml
 color_mode: light  # light | dark | auto | time
 color_mode_time:   # only effective when color_mode: time

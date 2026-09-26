@@ -8,6 +8,8 @@ The timeline is designed to showcase the blogger's **important** events or miles
 
 You can also use it to feature selected posts or other content. The timeline supports custom configuration.
 
+![Homepage timeline: important events and posts filtered by category](/img/timeline.png)
+
 Timeline is configured under `timeline`:
 
 ```yml

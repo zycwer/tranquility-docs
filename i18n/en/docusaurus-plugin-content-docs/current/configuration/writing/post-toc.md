@@ -6,6 +6,8 @@ sidebar_position: 2
 
 Show the post's table of contents by setting `toc: true` in the post's front-matter. Recommended for posts with deep hierarchical structure; can be turned off for prose and text-heavy posts.
 
+![Post body with the TOC sidebar on the right](/img/toc.png)
+
 ```yml
 ---
 title: A Deeply Structured Post

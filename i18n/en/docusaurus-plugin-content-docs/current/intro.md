@@ -26,6 +26,7 @@ This design serves two needs: a **homepage that showcases personal identity**, a
 
 - [Post cover](./configuration/writing/post-cover.md), [TOC](./configuration/writing/post-toc.md), [sticky posts](./configuration/writing/post-pin.md), [excerpt](./configuration/writing/post-excerpt.md)
 - [Related posts](./configuration/writing/related-post.md), [tag cloud](./configuration/writing/tagcloud.md), [code highlighting](./configuration/writing/code-highlight.md)
+- [Archive page](./configuration/basic/archive.md): timeline-style post archive grouped by year
 - [Math formulas](./configuration/writing/math.md) (MathJax), [Mermaid diagrams](./configuration/writing/mermaid.md)
 
 **SEO & discoverability**
@@ -38,6 +39,7 @@ This design serves two needs: a **homepage that showcases personal identity**, a
 
 - [Dark mode](./configuration/experience/dark-mode.md) with four strategies (light/dark/scheduled/follow-browser)
 - [PWA](./configuration/experience/pwa.md) offline access, [content-fingerprinted](./configuration/experience/fingerprint.md) asset caching, [font subsetting](./configuration/experience/font.md)
+- [Sakura falling](./configuration/experience/sakura.md) decoration, [music player](./configuration/experience/music.md) with cross-page playback memory
 - [Back-to-top button](./configuration/experience/accessibility.md), `prefers-reduced-motion` accessibility degradation, lazy image loading, responsive across desktop/tablet/mobile
 - [CSP security policy](./configuration/experience/security.md), build-time URL validation, XSS injection protection
 
@@ -49,7 +51,7 @@ This design serves two needs: a **homepage that showcases personal identity**, a
 
 ## Fork Notice
 
-This repository is a fork of [hooozen/hexo-theme-tranquility](https://github.com/hooozen/hexo-theme-tranquility). The original repository was archived in June 2026 and is no longer maintained. This fork continues maintenance, adding features and fixing bugs on top of the original, including: Hitokoto slogan, article-driven timeline, Hexo native about page, build-time RSS-aggregated "Recent Updates", runtime dark mode, Open Graph / JSON-LD / sitemap / robots.txt / RSS auto-discovery, PWA, lazy image loading, back-to-top button, accessibility degradation, font loading optimization, security hardening (XSS / CSP / injection protection), projects showcase, skills display, announcement banner, site uptime counter, and more.
+This repository is a fork of [hooozen/hexo-theme-tranquility](https://github.com/hooozen/hexo-theme-tranquility). The original repository was archived in June 2026 and is no longer maintained. This fork continues maintenance, adding features and fixing bugs on top of the original, including: Hitokoto slogan, article-driven timeline, Hexo native about page, build-time RSS-aggregated "Recent Updates", runtime dark mode, Open Graph / JSON-LD / sitemap / robots.txt / RSS auto-discovery, PWA, lazy image loading, back-to-top button, accessibility degradation, font loading optimization, security hardening (XSS / CSP / injection protection), projects showcase, skills display, announcement banner, site uptime counter, archive page, sakura falling decoration, music player, and more.
 
 See the [Changelog](./changelog.md) and [Releases](https://github.com/zycwer/hexo-theme-tranquility/releases) for the full version history.
 

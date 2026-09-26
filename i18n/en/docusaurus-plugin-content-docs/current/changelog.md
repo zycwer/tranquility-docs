@@ -6,6 +6,40 @@ sidebar_position: 7
 
 This page summarizes the per-version changes since the fork. For the full diff between versions, see the [GitHub Releases](https://github.com/zycwer/hexo-theme-tranquility/releases) page.
 
+## v1.9.0 — Archive Page, Sakura & Music Player
+
+> v1.8.0 was deprecated on npm due to a release-process mistake; do not install it. Its content is included in this version.
+
+### New features
+
+- **Archive page**: timeline-style post archive grouped by year (`/archives/`), with a one-line `nav.archive` navbar entry
+- **Sakura falling**: site-wide decorative animation implemented with pure CSS hardware acceleration; automatically disabled for `prefers-reduced-motion` users and halved on mobile, with zero interaction blocking
+- **Music player**: APlayer mini mode floating in the bottom-left corner (JS/CSS via CDN, no package size cost); remembers track and playback position across pages via localStorage and tries to resume automatically
+
+### Configuration example
+
+```yaml
+sakura:
+  enable: true
+  density: 16 # petals on screen; automatically halved on mobile
+
+music:
+  enable: true
+  songs:
+    - name: Song title
+      artist: Artist
+      url: https://example.com/song.mp3
+      cover: https://example.com/cover.jpg
+
+nav:
+  archive: true # show an "Archive" entry in the navbar
+```
+
+## v1.7.2 ~ v1.7.3 — Font Size Optimization & Release-Process Fixes
+
+- v1.7.2: fonts fully converted to WOFF2 and subset to the GB2312 level-1 charset, package size 4.2MB → 1.9MB; Hitokoto restricted to classical poetry
+- v1.7.3: mistakenly published 1.8.0 npm package withdrawn (marked deprecated), superseded by a minor version bump
+
 ## v1.7.1 — CDN Reliability & Math Fixes
 
 ### CDN reliability (highlights)
